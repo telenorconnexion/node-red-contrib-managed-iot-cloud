@@ -1,0 +1,45 @@
+<script type="text/javascript">
+
+RED.nodes.registerType('managed-iot-cloud-api', {
+  category: 'function',
+  color: '#00a6d6',
+  defaults: {
+    account: { value:"", type:"managed-iot-cloud-account" },
+    endpoint:  { value: "ThingLambda" }
+  },
+  inputs:  1,
+  outputs: 1,
+  icon: "telenor.png",
+  label: function() {
+    return this.endpoint.replace("Lambda", " API") || "Managed IoT Cloud API";
+  },
+  paletteLabel: function() {
+    return "MiC API";
+  }
+});
+
+</script>
+
+<script type="text/x-red" data-template-name="managed-iot-cloud-api">
+  <div class="form-row">
+    <label for="node-input-account"><i class="icon-tag"></i> Account</label>
+    <input type="text" id="node-input-account">
+  </div>
+  <div class="form-row">
+    <label for="node-input-endpoint"><i class="icon-tag"></i> Endpoint</label>
+    <select id="node-input-endpoint">
+      <option value="ThingLambda">Things</option>
+      <option value="ThingBatchLambda">Thing batch</option>
+      <option value="ThingTypeLambda">Thing types</option>
+      <option value="DomainLambda">Domains</option>
+      <option value="ObservationLambda">Observations</option>
+      <option value="UserLambda">Users</option>
+      <option value="RuleLambda">Rules</option>
+      <option value="FileLambda">Files</option>
+    </select>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="managed-iot-cloud-api">
+  <p>Managed IoT Cloud API node</p>
+</script>

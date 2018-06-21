@@ -1,0 +1,45 @@
+<script type="text/javascript">
+
+RED.nodes.registerType('managed-iot-cloud-event-out', {
+  category: 'output',
+  color: '#00a6d6',
+  defaults: {
+    account: { value:"", type:"managed-iot-cloud-account" },
+    topic:  { value: "" },
+    name: { value: "" }
+  },
+  inputs:  1,
+  outputs: 0,
+  icon: "telenor.png",
+  label: function() {
+    return this.name  || this.topic || "Managed IoT Cloud Event Out";
+  },
+  paletteLabel: function() {
+    return "MiC Event";
+  }
+});
+
+</script>
+
+<script type="text/x-red" data-template-name="managed-iot-cloud-event-out">
+  <div class="form-row">
+    <label for="node-input-account"><i class="icon-tag"></i> Account</label>
+    <input type="text" id="node-input-account">
+  </div>
+  <div class="form-row">
+    <label for="node-input-topic"><i class="icon-tag"></i> Topic</label>
+    <input type="text" id="node-input-topic">
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name">
+  </div>
+  <div class="form-tips">
+    Tip: Leave topic blank if you want to set it via msg properties.
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="managed-iot-cloud-event-out">
+  <p>Managed IoT Cloud Event Out Node</p>
+</script>
+

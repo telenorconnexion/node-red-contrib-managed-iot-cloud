@@ -1,0 +1,41 @@
+<script type="text/javascript">
+
+RED.nodes.registerType('managed-iot-cloud-event-in', {
+  category: 'input',
+  color: '#00a6d6',
+  defaults: {
+    account: { value:"", type:"managed-iot-cloud-account" },
+    topic:  { value: "" },
+    name: { value: "" }
+  },
+  inputs:  0,
+  outputs: 1,
+  icon: "telenor.png",
+  label: function() {
+    return this.name || this.topic || "Managed IoT Cloud Event In";
+  },
+  paletteLabel: function() {
+    return "MiC Event";
+  }
+});
+
+</script>
+
+<script type="text/x-red" data-template-name="managed-iot-cloud-event-in">
+  <div class="form-row">
+    <label for="node-input-account"><i class="icon-tag"></i> Account</label>
+    <input type="text" id="node-input-account">
+  </div>
+  <div class="form-row">
+    <label for="node-input-topic"><i class="icon-tag"></i> Topic</label>
+    <input type="text" id="node-input-topic">
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="managed-iot-cloud-event-in">
+  <p>Managed IoT Cloud Event In Node</p>
+</script>

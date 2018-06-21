@@ -1,0 +1,33 @@
+<script type="text/javascript">
+  RED.nodes.registerType('managed-iot-cloud-account', {
+    category: 'config',
+    defaults: {
+      manifesturl: { value: "", required: true },
+      url: { value: "", required: true },
+      username: { value: "", required: true },
+      password: { value: "", required: true }
+    },
+    label: function () {
+      return this.url || "Managed IoT Cloud Account"
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="managed-iot-cloud-account">
+  <div class="form-row">
+    <label for="node-config-input-manifesturl"><i class="icon-bookmark"></i>Manifest Url</label>
+    <input type="text" id="node-config-input-manifesturl">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-url"><i class="icon-bookmark"></i> Url</label>
+    <input type="text" id="node-config-input-url">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-username"><i class="icon-bookmark"></i> Username</label>
+    <input type="text" id="node-config-input-username">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-password"><i class="icon-bookmark"></i> Password</label>
+    <input type="password" id="node-config-input-password">
+  </div>
+</script>
