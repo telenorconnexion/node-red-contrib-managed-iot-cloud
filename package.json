@@ -13,6 +13,7 @@
     "aws-sdk": "^2.4.6",
     "request": "^2.74.0"
   },
+  "keywords": [ "node-red" ],
   "node-red": {
     "nodes": {
       "managed-iot-cloud-account": "lib/account.js",
