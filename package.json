@@ -1,12 +1,12 @@
 {
   "name": "node-red-contrib-managed-iot-cloud",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "API end event in/out nodes for Telenor Managed IoT Cloud",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Gustav Jorlöv <gustav.jorlov@telenorconnexion.com>",
+  "author": "Gustav Jorlöv <mic-dev@telenorconnexion.com>",
   "license": "ISC",
   "dependencies": {
     "aws-iot-device-sdk": "^1.0.12",
